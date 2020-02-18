@@ -1,0 +1,14 @@
+
+<h1> <%= @task.title %> </h1>
+<p> <%= @task.details %> </p>
+<% task = @task %>
+<p> done?
+    <%= if task.completed == true
+   check_box_tag(task.title, task.title, checked = true)
+    else
+   check_box_tag(task.title, task.title, checked = false)
+    end
+   %>
+</p>
+<%= link_to "show all tasks", "/tasks" %>
+
